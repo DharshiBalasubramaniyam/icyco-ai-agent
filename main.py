@@ -1,17 +1,25 @@
-from langchain.agents import initialize_agent, AgentType
-from tools import tools
-from utils import getLLM
+from langgraph.graph import StateGraph
 
-llm = getLLM()
-agent = initialize_agent(
-    tools,
-    llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    verbose=True
-)
+from data_models import ChatState
+from nodes import start_node, handle_command, handle_question, detect_intent, handle_response
+from utils import decide_intent
 
-response = agent.invoke({"input": "What is 12 * 8?"})
-print("\nFinal Answer:", response)
+graph = StateGraph(ChatState)
 
-response = agent.invoke({"input": "Reverse word 'Apple'."})
-print("\nFinal Answer:", response)
+graph.add_node("start", start_node)
+graph.add_node("detect_intent", detect_intent)
+graph.add_node("handle_question", handle_question)
+graph.add_node("handle_command", handle_command)
+graph.add_node("handle_response", handle_response)
+
+graph.set_entry_point("start")
+graph.add_edge("start", "detect_intent")
+graph.add_conditional_edges("detect_intent", decide_intent)
+graph.add_edge("handle_question", "handle_response")
+graph.add_edge("handle_command", "handle_response")
+
+graph2 = graph.compile()
+
+state = ChatState(user_input="How are you?")
+graph2.invoke(state)
+
