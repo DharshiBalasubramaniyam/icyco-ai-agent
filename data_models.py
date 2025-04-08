@@ -1,5 +1,6 @@
 class ChatState:
-    def __init__(self, user_input):
-        self.user_input = user_input
+    def __init__(self):
+        self.user_input = None
         self.intent = None
+        self.intent_arguments = None
         self.response = None

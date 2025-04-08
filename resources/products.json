@@ -1,0 +1,500 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "name": "Chocolate Chip Cookie",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 10,
+        "medium (400ml)": 14,
+        "large (600ml)": 18,
+        "family pack (1.2l)": 24
+      },
+      "description": "A classic treat loaded with chocolate chips and a soft, chewy center.",
+      "image": "images/chocolate.jpg",
+      "rating": 4,
+      "ingredients": [
+        "flour",
+        "sugar",
+        "chocolate chips",
+        "butter",
+        "eggs",
+        "vanilla extract"
+      ]
+    },
+    {
+      "id": "p002",
+      "name": "Häagen-Dazs Vanilla",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 26
+      },
+      "description": "Creamy vanilla ice cream made with real Madagascar vanilla beans.",
+      "image": "images/vannila.jpg",
+      "rating": 5,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "egg yolks",
+        "vanilla beans"
+      ]
+    },
+    {
+      "id": "p003",
+      "name": "Homemade Vanilla",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 11,
+        "medium (400ml)": 15,
+        "large (600ml)": 19,
+        "family pack (1.2l)": 23
+      },
+      "description": "Rich and smooth homemade vanilla ice cream for a traditional experience.",
+      "image": "images/mango.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "vanilla extract"
+      ]
+    },
+    {
+      "id": "p004",
+      "name": "Cookies & Cream",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 27
+      },
+      "description": "Vanilla ice cream filled with crunchy chocolate cookie chunks.",
+      "image": "images/vannila.jpg",
+      "rating": 5,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "chocolate cookies",
+        "vanilla"
+      ]
+    },
+    {
+      "id": "p005",
+      "name": "Sea Salt Caramel Gelato",
+      "flavor_id": "f002",
+      "price": {
+        "small (200ml)": 14,
+        "medium (400ml)": 18,
+        "large (600ml)": 22,
+        "family pack (1.2l)": 28
+      },
+      "description": "Silky caramel gelato with a hint of sea salt for a perfect sweet-salty blend.",
+      "image": "images/strawberry.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "caramel",
+        "sea salt"
+      ]
+    },
+    {
+      "id": "p006",
+      "name": "Stracciatella Gelato",
+      "flavor_id": "f002",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 26
+      },
+      "description": "Italian gelato infused with fine chocolate shavings.",
+      "image": "images/peanut-butter.jpg",
+      "rating": 5,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "chocolate",
+        "vanilla"
+      ]
+    },
+    {
+      "id": "p007",
+      "name": "Pistachio Gelato",
+      "flavor_id": "f002",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 27
+      },
+      "description": "Creamy gelato blended with roasted pistachios for a nutty delight.",
+      "image": "images/mango.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "pistachios"
+      ]
+    },
+    {
+      "id": "p008",
+      "name": "Mediterranean Mint",
+      "flavor_id": "f002",
+      "price": {
+        "small (200ml)": 10,
+        "medium (400ml)": 13,
+        "large (600ml)": 17,
+        "family pack (1.2l)": 22
+      },
+      "description": "Refreshing mint-flavored gelato with a Mediterranean twist.",
+      "image": "images/mint.jpg",
+      "rating": 3,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "mint extract"
+      ]
+    },
+    {
+      "id": "p009",
+      "name": "Raspberry Sorbetto",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 11,
+        "medium (400ml)": 14,
+        "large (600ml)": 18,
+        "family pack (1.2l)": 23
+      },
+      "description": "Dairy-free sorbet made with real raspberries for a tangy burst.",
+      "image": "images/rainbow.jpg",
+      "rating": 4,
+      "ingredients": [
+        "raspberries",
+        "sugar",
+        "lemon juice",
+        "water"
+      ]
+    },
+    {
+      "id": "p010",
+      "name": "Mango Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 27
+      },
+      "description": "Tropical mango sorbet made with ripe mangoes and natural sweetness.",
+      "image": "images/mango.jpg",
+      "rating": 5,
+      "ingredients": [
+        "mangoes",
+        "sugar",
+        "lime juice",
+        "water"
+      ]
+    },
+    {
+      "id": "p011",
+      "name": "Berry Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 25
+      },
+      "description": "A mix of berries blended into a smooth and fruity sorbet.",
+      "image": "images/blue berry.jpg",
+      "rating": 3,
+      "ingredients": [
+        "blueberries",
+        "strawberries",
+        "blackberries",
+        "sugar",
+        "lemon juice"
+      ]
+    },
+    {
+      "id": "p012",
+      "name": "Lemon Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 10,
+        "medium (400ml)": 14,
+        "large (600ml)": 18,
+        "family pack (1.2l)": 23
+      },
+      "description": "Zesty lemon sorbet that offers a refreshing citrus flavor.",
+      "image": "images/chocolate.jpg",
+      "rating": 4,
+      "ingredients": [
+        "lemon juice",
+        "sugar",
+        "water"
+      ]
+    },
+    {
+      "id": "p013",
+      "name": "Strawberry Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 26
+      },
+      "description": "Light and sweet strawberry sorbet made from real fruit.",
+      "image": "images/strawberry.jpg",
+      "rating": 5,
+      "ingredients": [
+        "strawberries",
+        "sugar",
+        "lemon juice",
+        "water"
+      ]
+    },
+    {
+      "id": "p014",
+      "name": "Chocolate Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 11,
+        "medium (400ml)": 15,
+        "large (600ml)": 19,
+        "family pack (1.2l)": 24
+      },
+      "description": "Rich chocolate flavor in a smooth dairy-free sorbet.",
+      "image": "images/chocolate.jpg",
+      "rating": 4,
+      "ingredients": [
+        "cocoa",
+        "sugar",
+        "water"
+      ]
+    },
+    {
+      "id": "p015",
+      "name": "Peach Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 15,
+        "large (600ml)": 19,
+        "family pack (1.2l)": 24
+      },
+      "description": "Delicate and fruity peach sorbet made with juicy peaches.",
+      "image": "images/peach.jpg",
+      "rating": 3,
+      "ingredients": [
+        "peaches",
+        "sugar",
+        "lemon juice",
+        "water"
+      ]
+    },
+    {
+      "id": "p016",
+      "name": "Pineapple Coconut Sorbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 27
+      },
+      "description": "Tropical sorbet made with real pineapple and creamy coconut milk.",
+      "image": "images/pineapple.jpg",
+      "rating": 4,
+      "ingredients": [
+        "pineapple",
+        "coconut milk",
+        "sugar",
+        "lime juice"
+      ]
+    },
+    {
+      "id": "p017",
+      "name": "Peanut Butter Cup",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 14,
+        "medium (400ml)": 18,
+        "large (600ml)": 22,
+        "family pack (1.2l)": 28
+      },
+      "description": "Creamy peanut butter ice cream loaded with chocolate peanut butter cups.",
+      "image": "images/peanut-butter.jpg",
+      "rating": 5,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "peanut butter",
+        "chocolate"
+      ]
+    },
+    {
+      "id": "p018",
+      "name": "Banana Split",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 26
+      },
+      "description": "Classic banana split ice cream with banana, strawberry, and chocolate swirls.",
+      "image": "images/banana.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "banana",
+        "strawberry",
+        "chocolate"
+      ]
+    },
+    {
+      "id": "p019",
+      "name": "Rainbow Sherbet",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 11,
+        "medium (400ml)": 14,
+        "large (600ml)": 18,
+        "family pack (1.2l)": 23
+      },
+      "description": "Colorful and fruity sherbet with orange, raspberry, and lime flavors.",
+      "image": "images/rainbow.jpg",
+      "rating": 4,
+      "ingredients": [
+        "sugar",
+        "orange juice",
+        "raspberries",
+        "lime juice",
+        "water"
+      ]
+    },
+    {
+      "id": "p020",
+      "name": "Blueberry Cheesecake",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 27
+      },
+      "description": "Cheesecake ice cream with blueberry swirls and cheesecake chunks.",
+      "image": "images/blue berry.jpg",
+      "rating": 5,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "blueberries",
+        "cream cheese",
+        "vanilla"
+      ]
+    },
+    {
+      "id": "p021",
+      "name": "Rocky Road",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 25
+      },
+      "description": "Chocolate ice cream with marshmallows and almonds for a crunchy treat.",
+      "image": "images/chocolate.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "chocolate",
+        "marshmallows",
+        "almonds"
+      ]
+    },
+    {
+      "id": "p022",
+      "name": "Black Raspberry Chip",
+      "flavor_id": "f003",
+      "price": {
+        "small (200ml)": 14,
+        "medium (400ml)": 18,
+        "large (600ml)": 22,
+        "family pack (1.2l)": 28
+      },
+      "description": "Delicious black raspberry sorbet with dark chocolate chips.",
+      "image": "images/blue berry.jpg",
+      "rating": 5,
+      "ingredients": [
+        "black raspberries",
+        "sugar",
+        "lemon juice",
+        "dark chocolate"
+      ]
+    },
+    {
+      "id": "p023",
+      "name": "Salted Caramel Brownie",
+      "flavor_id": "f002",
+      "price": {
+        "small (200ml)": 13,
+        "medium (400ml)": 17,
+        "large (600ml)": 21,
+        "family pack (1.2l)": 26
+      },
+      "description": "Caramel gelato with fudgy brownie chunks and a hint of sea salt.",
+      "image": "images/strawberry.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "caramel",
+        "brownies",
+        "sea salt"
+      ]
+    },
+    {
+      "id": "p024",
+      "name": "Cherry Garcia",
+      "flavor_id": "f001",
+      "price": {
+        "small (200ml)": 12,
+        "medium (400ml)": 16,
+        "large (600ml)": 20,
+        "family pack (1.2l)": 25
+      },
+      "description": "Cherry ice cream with cherry chunks and chocolate flakes.",
+      "image": "images/cherry.jpg",
+      "rating": 4,
+      "ingredients": [
+        "milk",
+        "cream",
+        "sugar",
+        "cherries",
+        "chocolate"
+      ]
+    }
+  ]
+}
