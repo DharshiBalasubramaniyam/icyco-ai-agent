@@ -7,9 +7,12 @@ from google import genai
 from nodes import end, handle_response, start_node, detect_intent, question_answer, filter_products, product_query, handle_unrelated_questions
 from utils import get_vector_store
 
-router_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-qa_vector_store = get_vector_store(os.getenv("QA_INDEX_NAME"))       
-qa_client = GoogleGenerativeAI(model="gemini-2.0-flash", api_key=os.getenv("GOOGLE_API_KEY"))      
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
 
 graph_builder = StateGraph(ChatState)
 
@@ -30,9 +33,22 @@ graph_builder.add_edge("question_answer", "handle_response")
 graph_builder.add_edge("filter_products", "handle_response")
 graph_builder.add_edge("product_query", "handle_response")
 graph_builder.add_edge("handle_unrelated_questions", "handle_response")
-graph_builder.add_edge("handle_response", "start")
+graph_builder.add_edge("handle_response", "end_node")
 
 graph = graph_builder.compile()
 
-graph.invoke(ChatState())
 
+@app.post('/chat')
+def chat():
+   data = request.get_json()
+
+   query = data["query"]
+   chat_history = data["chat_history"]
+
+   state = graph.invoke(ChatState(user_input=query, chat_history=chat_history))
+   return jsonify({
+        "result": state.response,
+   }), 200
+
+if __name__ == '__main__':
+   app.run()

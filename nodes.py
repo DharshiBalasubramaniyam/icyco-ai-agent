@@ -1,14 +1,16 @@
+import os
+import genai
 from data_models import ChatState
 
+from google import genai
 from google.genai import types
 
 from function_declarations import f_question_answer, f_filter_products, f_handle_unrelated_questions, f_product_query
 from tools import product_filter_tool, product_query_tool, question_answer_tool
-from main import router_client
 
+router_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def start_node(state: ChatState):
-    state.user_input = input("User: ")
     return state
 
 def detect_intent(state: ChatState):
@@ -22,7 +24,7 @@ def detect_intent(state: ChatState):
 
     response = router_client.models.generate_content(
         model="gemini-2.0-flash",
-        contents=state.user_input,
+        contents=state.chat_history,
         config=config,
     )
 

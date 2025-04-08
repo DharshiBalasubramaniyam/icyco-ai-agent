@@ -57,7 +57,7 @@ f_product_query = {
             },
             "question": {
                 "type": "string",
-                "description": "The question asked by the user.",
+                "description": "The question asked by the user mentioning the target ice cream name.",
             }
         },
         "required": ["ice_cream_name", "question"],

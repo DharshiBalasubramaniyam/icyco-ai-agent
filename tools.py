@@ -1,11 +1,17 @@
 import json
-from utils import createRagChain, getLLM
-from main import qa_client, qa_vector_store
+import os
+
+from langchain_google_genai import GoogleGenerativeAI
+from utils import createRagChain, get_vector_store, getLLM
 
 from langchain_core.prompts import PromptTemplate
 
+qa_vector_store = get_vector_store(os.getenv("QA_INDEX_NAME"))       
+qa_client = GoogleGenerativeAI(model="gemini-2.0-flash", api_key=os.getenv("GOOGLE_API_KEY"))      
+
 def question_answer_tool(question):
-   prompt_template = """
+   prompt = PromptTemplate(
+      template="""
             You are a helpful, friendly, and engaging AI assistant for **Icyco**, an ice cream shop. 
             Your job is to answer user questions related to Icyco’s products, services, events, or company info in a way that is both informative and delightful.
 
@@ -30,13 +36,16 @@ def question_answer_tool(question):
 
             question: {question}
          """,
-   prompt = PromptTemplate(
-      template=prompt_template,
       input_variables=["context", "question"],
    )
-   rag_chain = createRagChain(qa_client, qa_vector_store, prompt)  
-   response = rag_chain.invoke({"query": question})  
-   return response["result"] if response else "Oops! Something went wrong while processing your request."
+   try:
+     rag_chain = createRagChain(qa_client, qa_vector_store, prompt)  
+     response = rag_chain.invoke({"query": question})  
+     return response["result"] if response else "Oops! Something went wrong while processing your request."
+   except Exception as e:
+     print(f"Error: {e}")
+     return "Sorry, I couldn't process your query. Please try again after some time!"
+
 
 def product_filter_tool(keywords, start_price, end_price, start_rating, end_rating):
    with open('resources/products.json', 'r') as file:
@@ -73,7 +82,6 @@ def product_query_tool(ice_cream_name, query):
    if not products_by_keyword:
         return f"Sorry, I couldn't find any information about {ice_cream_name}. Please check the name and try again!"
 
-   llm = getLLM()
    prompt_template = f"""
             You are a helpful, friendly, and engaging AI assistant for **Icyco**, an ice cream shop. 
             Your job is to answer user question related to one of the icyco products using the provided context.
@@ -95,5 +103,10 @@ def product_query_tool(ice_cream_name, query):
 
             question: {query}
         """
-   response = llm.invoke(prompt_template)
-   return response
+   try:
+     llm = getLLM()
+     response = llm.invoke(prompt_template)
+     return response
+   except Exception as e:
+            print(f"Error: {e}")
+            return "Sorry, I couldn't find any information about the product. Please try again after some time!"
