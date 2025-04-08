@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Create a non-root user with UID 10014 (required by Checkov)
-RUN addgroup -S appgroup && adduser -S -u 10014 appuser -G appgroup
+RUN addgroup --system appgroup && adduser --system --uid 10014 --ingroup appgroup appuser
 
 # Set the working directory in the container
 WORKDIR /app
