@@ -1,0 +1,13 @@
+schemaVersion: 1.1
+endpoints:
+  - name: icyco-ai-agent
+    service:
+      port: 5000
+      basePath: /
+    type: REST
+    displayName: icyco-ai-agent
+    networkVisibilities:
+      - Public
+      - Project
+      - Organization
+    schemaFilePath: swagger.yaml

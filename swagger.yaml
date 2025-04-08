@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: Icyco AI Agent API
+  description: API specification for Icyco AI Agent
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/
+paths:
+  /chat:
+    post:
+      summary: Get response for a chat query
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  example: "What is icyco?"
+                chat_history:
+                  type: array
+                  items:
+                    type: string
+                  example:
+                    - "user: What is icyco?"
+                    - "assistant: Icyco is an ice cream shop."
+              required:
+                - query
+                - chat_history
+      responses:
+        '200':
+          description: Successful response with generated result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: "Icyco is an ice cream shop."
