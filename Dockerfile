@@ -5,9 +5,6 @@ FROM python:3.11-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Create a non-root user with UID 10014 (required by Checkov)
-RUN addgroup --system appgroup && adduser --system --uid 10014 --ingroup appgroup appuser
-
 # Set the working directory in the container
 WORKDIR /app
 
@@ -20,8 +17,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy the entire project into the container
 COPY . .
 
-# Set non-root user (UID 10014)
-USER 10014
+# Create a new user with UID 10016
+RUN addgroup -g 10016 choreo && \
+    adduser  --disabled-password  --no-create-home --uid 10016 --ingroup choreo choreouser
+USER 10016
 
 # Expose the port Flask runs on
 EXPOSE 5000
