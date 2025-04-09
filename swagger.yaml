@@ -6,6 +6,20 @@ info:
 servers:
   - url: http://localhost:5000
 paths:
+  /test:
+    get:
+      summary: Test endpoint
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Test successful"
   /chat:
     post:
       summary: Get response for a chat query

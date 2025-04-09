@@ -37,6 +37,10 @@ graph_builder.add_edge("handle_response", "end_node")
 
 graph = graph_builder.compile()
 
+@app.route('/test', methods=['GET'])
+def test():
+    return "API is working!"
+
 
 @app.post('/chat')
 def chat():
