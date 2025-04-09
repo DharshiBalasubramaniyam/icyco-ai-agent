@@ -85,13 +85,20 @@ Returns: A message
 
 Processes raw tool outputs into user-friendly responses. This is the final output node before exiting.
 
+## Screenshots
+
+For demo purposes, this chat cpi is consumed via https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website.
+
+![Screenshot 2025-04-09 153548](https://github.com/user-attachments/assets/4c0cecd8-2318-4c31-ba19-490d111b4beb)
 
 
+![Screenshot 2025-04-09 154449](https://github.com/user-attachments/assets/83e7cd1b-09bd-4006-a5a5-2cc899af54c3)
 
 
+![Screenshot 2025-04-09 154506](https://github.com/user-attachments/assets/1c0c4ca7-ce63-4c24-ac3a-754c76814a6a)
 
 
-
+![Screenshot 2025-04-09 154701](https://github.com/user-attachments/assets/2d0220f4-996c-47ed-935c-3f8db248b1d8)
 
 
 
