@@ -1,11 +1,7 @@
-import os
-from langchain_google_genai import GoogleGenerativeAI
 from langgraph.graph import StateGraph
 
 from data_models import ChatState
-from google import genai
 from nodes import end, handle_response, start_node, detect_intent, question_answer, filter_products, product_query, handle_unrelated_questions
-from utils import get_vector_store
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
