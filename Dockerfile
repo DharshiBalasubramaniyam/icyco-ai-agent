@@ -15,4 +15,4 @@ RUN addgroup --gid 10016 choreo && \
 
 USER 10016
 EXPOSE 5000
-CMD [ "flask", "run", "--host=0.0.0.0"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
