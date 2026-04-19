@@ -87,7 +87,7 @@ Processes raw tool outputs into user-friendly responses. This is the final outpu
 
 ## Screenshots
 
-For demo purposes, this chat cpi is consumed via https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website.
+For demo purposes, this chat API is consumed via https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website.
 
 ![Screenshot 2025-04-09 153548](https://github.com/user-attachments/assets/4c0cecd8-2318-4c31-ba19-490d111b4beb)
 
